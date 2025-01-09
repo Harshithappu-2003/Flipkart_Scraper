@@ -26,3 +26,24 @@ Before running the scraper, ensure the following are set up on your system:
    Install these libraries by running the following command:
    ```bash
    pip install requests beautifulsoup4
+
+## Example Output
+
+The scraper fetches and displays product details in a structured tabular format. Below is an example of the extracted data:
+
+| Product Name            | Price      | Specifications        | Ratings | Reviews |
+|-------------------------|------------|-----------------------|---------|---------|
+| Samsung Galaxy S23 Ultra| ₹1,24,999  | 12GB RAM, 256GB Storage | 4.8     | 3,204   |
+| Samsung Galaxy A14      | ₹13,999    | 4GB RAM, 64GB Storage  | 4.5     | 1,128   |
+| Samsung Galaxy M13      | ₹11,499    | 6GB RAM, 128GB Storage | 4.3     | 2,759   |
+| Samsung Galaxy F54      | ₹21,999    | 8GB RAM, 128GB Storage | 4.7     | 1,453   |
+
+### Key Fields
+- **Product Name**: Name of the product as listed on Flipkart.
+- **Price**: The listed price of the product in Indian Rupees.
+- **Specifications**: Key technical details like RAM and storage capacity.
+- **Ratings**: Average user rating out of 5.
+- **Reviews**: Number of reviews provided by users.
+
+
+
