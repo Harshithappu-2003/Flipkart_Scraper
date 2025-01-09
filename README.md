@@ -46,4 +46,30 @@ The scraper fetches and displays product details in a structured tabular format.
 - **Reviews**: Number of reviews provided by users.
 
 
+### Customizing the Scraper
+
+#### 1. Target Product or Category
+You can scrape different products or categories by modifying the `FLIPKART_URL` variable in the code. For instance:
+- Change the URL to target a specific search query, such as "laptops" or "headphones."
+- Use category-specific URLs to narrow down the results (e.g., "Samsung smartphones" or "4K TVs").
+
+#### 2. Extract Additional Fields
+Enhance the scraper by modifying the HTML parsing logic to extract more details from the product listings. Additional fields you might want to include:
+- **Discounts**: Extract the percentage or amount saved on each product.
+- **Delivery Options**: Scrape information about delivery times or charges.
+- **Seller Information**: Get details about the seller (e.g., name or rating).
+- **Stock Availability**: Check if the product is in stock or out of stock.
+
+#### 3. Pagination
+To scrape data from multiple pages of results, implement a loop in the code to navigate through Flipkart's paginated results:
+- Flipkart URLs for paginated results typically include a page number parameter, such as `page=2` or `page=3`.
+- Modify the scraper logic to iterate through these page numbers until all relevant data is collected.
+
+**Example:**
+```python
+base_url = "https://www.flipkart.com/search?q=samsung+phones&page="
+for page in range(1, 6):  # Scrape first 5 pages
+    url = f"{base_url}{page}"
+    response = requests.get(url)
+
 
